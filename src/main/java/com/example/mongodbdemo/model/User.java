@@ -1,10 +1,22 @@
 package com.example.mongodbdemo.model;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "user")
 public class User {
 	
+	@Id
+	private String _id;
+	
+	public String get_id() {
+		return _id;
+	}
+
+	public void set_id(String _id) {
+		this._id = _id;
+	}
+
 	private String name;
 	
 	private String city;
@@ -36,7 +48,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [name=" + name + ", city=" + city + ", salary=" + salary + ", hobbies=" + hobbies + "]";
+		return "User [id=" + _id + ",name=" + name + ", city=" + city + ", salary=" + salary + ", hobbies=" + hobbies + "]";
 	}
 
 	public String getName() {

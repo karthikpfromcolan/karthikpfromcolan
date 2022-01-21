@@ -34,7 +34,7 @@ public class UserController {
 	}
 	
 	@GetMapping("/{id}")
-	User getUserById(@PathVariable Long id) {
+	User getUserById(@PathVariable String id) {
 		Optional<User> user = userRepo.findById(id);
 		return user.get();
 	}
@@ -49,7 +49,7 @@ public class UserController {
 	}
 	
 	@PutMapping("/update/{id}")
-	public String updateUser(@RequestBody User user, @PathVariable Long id){
+	public String updateUser(@RequestBody User user, @PathVariable String id){
 		
 		User oldUser = getUserById(id);
 		oldUser.setCity(user.getCity());
@@ -61,7 +61,7 @@ public class UserController {
 	}
 	
 	@DeleteMapping("/remove/{id}")
-	String removeUser(@PathVariable Long id) {
+	String removeUser(@PathVariable String id) {
 		userRepo.deleteById(id);
 		return "removed";
 	}
