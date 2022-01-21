@@ -18,7 +18,7 @@ import com.example.mongodbdemo.model.User;
 import com.example.mongodbdemo.repository.UserRepository;
 
 @RestController
-@RequestMapping("/user-opr")
+@RequestMapping("/user")
 public class UserController {
 	
 	@Autowired

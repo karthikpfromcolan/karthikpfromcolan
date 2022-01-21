@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 //@EnableMongoRepositories
+//@Enableswa
 public class MongoDbDemoApplication {
 
 	public static void main(String[] args) {

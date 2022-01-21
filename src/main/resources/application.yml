@@ -1,9 +1,10 @@
 server:
-  port: 8081
+  port: 8082
   
 spring:
   data:
     mongodb:
-      host: mongo_db
+      host: localhost
+#      host: mongo_db
       database: userdb
       port: 27017
